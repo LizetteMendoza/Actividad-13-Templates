@@ -19,6 +19,7 @@ class ArregloDinamico{
     ~ArregloDinamico();
     void insertar_inicio(const T& v);
     void insertar_final(const T& v);
+    void insertar(const T& v, size_t p);
     size_t size();
     T operator [] (size_t p){
         return arreglo[p];
@@ -60,6 +61,27 @@ void ArregloDinamico<T>::insertar_inicio(const T& v){
 
     arreglo[0] =v;
     cont ++;
+}
+
+template<class T>
+void ArregloDinamico<T>::insertar(const T&v, size_t p){
+
+    if(p>=cont){
+        cout<<"Posicion no valida"<<endl;
+        return;
+    }
+
+    if(cont == tam){
+        expandir();
+    }
+
+    for (size_t i = cont; i > p; i--){
+        arreglo[i]=arreglo[i-1];
+    }
+
+    arreglo[p] =v;
+    cont ++;
+
 }
 
 template<class T>
