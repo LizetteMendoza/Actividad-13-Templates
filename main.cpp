@@ -6,24 +6,19 @@ using namespace std;
 
 int main(){
 
-    ArregloDinamico<int> arreglo;
+    ArregloDinamico<string> arreglo;
 
-    arreglo.insertar_final(1);
-    arreglo.insertar_final(4);
-    arreglo.insertar_final(6);
-    arreglo.insertar_final(7);
-    arreglo.insertar_final(9);
-    arreglo.insertar_final(10);
-    arreglo.insertar_final(2);
-    arreglo.insertar_final(5);
-    arreglo.insertar_inicio(8);
-    arreglo.insertar_inicio(3);
+    arreglo.insertar_final("Memoria dinamica");
+    arreglo.insertar_final("Templates");
+    arreglo.insertar_inicio("Sobre carga de operadores");
+    arreglo.insertar_inicio("Lecura de archivos");
+    arreglo.insertar("Prueba del metodo insertar",2);
 
 
     cout<<endl;
     for (size_t i = 0; i < arreglo.size(); i++)
     {
-        cout<<arreglo[i]<<" ";
+        cout<<arreglo[i]<<" | ";
     }
     
     return 0;
