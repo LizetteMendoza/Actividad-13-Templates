@@ -12,8 +12,14 @@ int main(){
     arreglo.insertar_final("Templates");
     arreglo.insertar_inicio("Sobre carga de operadores");
     arreglo.insertar_inicio("Lecura de archivos");
-    arreglo.insertar("Prueba del metodo insertar",2);
 
+    cout<<endl;
+    for (size_t i = 0; i < arreglo.size(); i++)
+    {
+        cout<<arreglo[i]<<" | ";
+    }
+
+    arreglo.insertar("Prueba del metodo insertar",2);
 
     cout<<endl;
     for (size_t i = 0; i < arreglo.size(); i++)
