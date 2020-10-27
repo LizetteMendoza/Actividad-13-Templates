@@ -26,6 +26,18 @@ int main(){
     {
         cout<<arreglo[i]<<" | ";
     }
+
+    arreglo.eliminar_inicio();
+    arreglo.eliminar_final();
+    arreglo.eliminar(1);
+    
+    
+
+    cout<<endl;
+    for (size_t i = 0; i < arreglo.size(); i++)
+    {
+        cout<<arreglo[i]<<" | ";
+    }
     
     return 0;
 }
