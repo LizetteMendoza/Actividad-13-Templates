@@ -38,6 +38,15 @@ int main(){
     {
         cout<<arreglo[i]<<" | ";
     }
+
+    cout<<endl<<endl;
+    string *v = arreglo.buscar("Memoria dinamica");
+    cout<<v<<" "<<*v<<endl;
+    *v = "Busqueda lineal";
+    for (size_t i = 0; i < arreglo.size(); i++)
+    {
+        cout<<arreglo[i]<<" | ";
+    }
     
     return 0;
 }
