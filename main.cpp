@@ -1,12 +1,23 @@
 #include<iostream>
 #include"arreglo.h"
+#include"computadora.h"
 
 using namespace std;
 
 
 int main(){
 
-    ArregloDinamico<string> arreglo;
+    ArregloDinamico<Computadora>computadoras;
+    
+    Computadora c1("Lenovo 3 R7","AMD Ryzen 7 ","Windows 10 pro",16);
+    Computadora c2("Dell Gaming G5", "AMD Ryzen 5","Windows 10",8);
+    Computadora c3("ASUS ROG Strix G", "i Core i5-9","Windows 10 Pro",12);
+    Computadora c4("Lenovo ThinkPad L15", "i Core i5-10","Windows 10 Pro",8);
+    Computadora c5("Acer Nitro 5","i Core i5-9300H","Windows 10",8);
+
+    computadoras<<c1<<c2<<c3<<c4<<c5;
+
+    /*ArregloDinamico<string> arreglo;
 
     arreglo.insertar_final("Memoria dinamica");
     arreglo.insertar_final("Templates");
@@ -46,7 +57,7 @@ int main(){
     for (size_t i = 0; i < arreglo.size(); i++)
     {
         cout<<arreglo[i]<<" | ";
-    }
+    }*/
     
     return 0;
 }
