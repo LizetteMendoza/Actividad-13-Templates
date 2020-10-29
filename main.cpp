@@ -17,6 +17,16 @@ int main(){
 
     computadoras<<c1<<c2<<c3<<c4<<c5;
 
+    Computadora c6("Dell Gaming G6", "AMD Ryzen 5","Windows 10",8);
+
+    Computadora *ptr= computadoras.buscar(c6);
+    if(ptr!=nullptr){
+        cout<<endl<<*ptr<<endl;
+    }
+    else{
+        cout<<endl<<"No existe"<<endl;
+    }
+    
     /*ArregloDinamico<string> arreglo;
 
     arreglo.insertar_final("Memoria dinamica");
