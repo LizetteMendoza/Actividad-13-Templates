@@ -15,17 +15,30 @@ int main(){
     Computadora c4("Lenovo ThinkPad L15", "i Core i5-10","Windows 10 Pro",8);
     Computadora c5("Acer Nitro 5","i Core i5-9300H","Windows 10",8);
 
-    computadoras<<c1<<c2<<c3<<c4<<c5;
+    computadoras<<c1<<c2<<c2<<c2<<c3<<c4<<c5;
 
-    Computadora c6("Dell Gaming G6", "AMD Ryzen 5","Windows 10",8);
+    Computadora c6("Dell Gaming G5", "AMD Ryzen 5","Windows 10",8);
 
-    Computadora *ptr= computadoras.buscar(c6);
+    ArregloDinamico<Computadora*> ptrs= computadoras.buscar_todos(c6);
+
+    if(ptrs.size()>0){
+        for (size_t i = 0; i < ptrs.size(); i++)
+        {
+            Computadora *c =ptrs[i];
+            cout<<*c<<endl;
+        }
+    }
+    else{
+        cout<<"No exixten coincidencias"<<endl;
+    }
+
+    /*Computadora *ptr= computadoras.buscar(c6);
     if(ptr!=nullptr){
         cout<<endl<<*ptr<<endl;
     }
     else{
         cout<<endl<<"No existe"<<endl;
-    }
+    }*/
     
     /*ArregloDinamico<string> arreglo;
 
