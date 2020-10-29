@@ -30,6 +30,12 @@ class ArregloDinamico{
     T operator [] (size_t p){
         return arreglo[p];
     }
+
+    friend ArregloDinamico<T>& operator<<(ArregloDinamico<T> &a, const T& v){
+        a.insertar_final(v);
+
+        return a;
+    }
     
 };
 
